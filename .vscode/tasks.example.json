@@ -1,0 +1,45 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "type": "shell",
+      "command": ["mvn", "compile"],
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "test all",
+      "type": "shell",
+      "command": ["mvn", "test"],
+      "problemMatcher": []
+    },
+    {
+      "label": "test",
+      "type": "shell",
+      "command": ["mvn", "test", "-Dtest=${fileBasenameNoExtension}"],
+      "problemMatcher": []
+    },
+    {
+      "label": "validate",
+      "type": "shell",
+      "command": ["mvn", "validate"],
+      "problemMatcher": []
+    },
+    {
+      "label": "package",
+      "type": "shell",
+      "command": ["mvn", "clean", "package", "assembly:single"],
+      "problemMatcher": []
+    },
+    {
+      "label": "clean",
+      "type": "shell",
+      "command": ["mvn", "clean"],
+      "problemMatcher": []
+    }
+  ]
+}
