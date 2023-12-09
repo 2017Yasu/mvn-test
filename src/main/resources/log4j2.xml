@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="all">
+    <Appenders>
+        <!-- 標準出力 -->
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <!-- レイアウト指定 -->
+            <PatternLayout pattern="%d %p %m%n" />
+        </Console>
+        <!-- 標準エラー出力 -->
+        <Console name="STDERR" target="SYSTEM_ERR"></Console>
+    </Appenders>
+    <Loggers>
+        <Root level="trace">
+            <AppenderRef ref="STDOUT" />
+        </Root>
+    </Loggers>
+</Configuration>
